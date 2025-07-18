@@ -1,0 +1,59 @@
+---
+title: "Accessing your VPS via SSH"
+description: "This tutorial will guide you through accessing your HighTPS VPS via OpenSSH (SSH for short)."
+icon: "code"
+---
+
+Many of our VPS offerings come with **IPv6-only** connectivity. While that’s perfect for modern systems, some apps or game servers still rely on **IPv4 and port forwarding**. Here’s how you can work around that using a free tunnel service built by the community.
+
+### 🛠️ Installing the Tunnel Service
+
+To get started, simply run this one-liner on your VPS:
+
+```
+apt update && apt install -y git && git clone https://github.com/nahmolol/tunnel && chmod +x tunnel/tunnel && mv tunnel/tunnel /usr/local/bin/ && rm -rf tunnel && clear && echo "Tunnel installed successfully! Run it with 'tunnel'"
+```
+
+### ➕ Creating a Port Forward
+
+Once installed, you can forward a port using:
+
+```
+tunnel make 80 
+```
+
+This will:
+
+- Assign a **URL \+ port** you can share with others.
+- Automatically forward requests to your VPS’s local port 80.
+
+You can forward any port your app needs — for example:
+
+```
+tunnel make 443  # for HTTPS 
+tunnel make 25565  # for Minecraft 
+tunnel make 8080  # for web services
+```
+
+### 💡 Use Cases
+
+- **Pterodactyl panel or wings** on IPv6-only nodes
+- **Web servers** (NGINX, Apache)
+- **Game servers** needing external access
+- **APIs or bots** requiring public endpoints
+
+---
+
+### 🔒 Security Tip
+
+If you're exposing a public-facing service, always:
+
+- Enable firewalls (like `ufw`)
+- Use SSL (Let's Encrypt or Cloudflare)
+- Avoid exposing admin panels or SSH on forwarded ports unless protected
+
+---
+
+### 💬 Need Help?
+
+This service is free to use on both Void Nodes and any other host. If you have suggestions or run into issues, reach out in the Void Nodes Discord.

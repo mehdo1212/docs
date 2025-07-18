@@ -16,16 +16,14 @@
           {
             "group": "Introduction",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "index"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Global tips",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "essentials/ayvftft",
+              "essentials/hightps-panel-overview"
             ]
           },
           {

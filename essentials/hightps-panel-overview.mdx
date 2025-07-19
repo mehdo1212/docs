@@ -1,59 +1,49 @@
 ---
-title: 'Images and embeds'
-description: 'Add image, video, and other HTML elements'
-icon: 'image'
+title: "Overview of the HighTPS panel"
+description: "Welcome to the HighTPS Panel — the control hub for all your VPS-hosted game and app servers. If you’re new to this, don’t fret. We’ll walk through the main parts of the panel, what each section does, and how to get the most out of it. Whether you're running Minecraft, FiveM, bots, or even your own services, this is where the magic happens."
+icon: "image"
 ---
 
 <img
-  style={{ borderRadius: '0.5rem' }}
-  src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
+  style={{ borderRadius:"0.5rem" }}
+  src="/Screenshot2025-07-19093132.png"
+  alt=""
+  title=""
 />
 
-## Image
+This is the main interface  of the panel. You can see on the left multiple buttons such as the shop, the servers area, the account area, the search button, and the logout button. (The "settings" button is reserved for admins).
 
-### Using Markdown
+![image.png](/images/image.png)
 
-The [markdown syntax](https://www.markdownguide.org/basic-syntax/#images) lets you add images using the following code
+Clicking on the shop, we see three menus: the server creation one, the ressource buying one and the credits buying one (not supported yet). To make a server, you simply go to the create menu and you fill out the form accordingly.
 
-```md
-![title](/path/image.jpg)
-```
+To buy additionnal ressources for your server, you need to invite/boost the server, and then we give you extra credits that can be used to buy ressources.
 
-Note that the image file size must be less than 5MB. Otherwise, we recommend hosting on a service like [Cloudinary](https://cloudinary.com/) or [S3](https://aws.amazon.com/s3/). You can then use that URL and embed.
+## 📂 Server Management Tabs
 
-### Using embeds
+Inside a specific server, you get multiple tabs:
 
-To get more customizability with images, you can also use [embeds](/writing-content/embed) to add images
+- **Console** – Real-time logs & input/output
+- **File Manager** – Edit, upload, or delete server files
+- **Databases** – MySQL databases with auto-creation support
+- **Schedules** – Automate restarts, backups, etc.
+- **Backups** – Manual or scheduled backups (if enabled)
+- **Users** – Add sub-users with restricted permissions
+- **Network** – View port allocations
+- **Startup** – Modify environment variables (startup flags)
+- **Settings** – Rename or delete the server
 
-```html
-<img height="200" src="/path/image.jpg" />
-```
+---
 
-## Embeds and HTML elements
+## 💬 Helpful Tips
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/4KzFe50RQkQ"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  style={{ width: '100%', borderRadius: '0.5rem' }}
-></iframe>
+- **Use backups** before major changes
+- **Enable 2FA** for extra security
+- **Use sub-users** instead of sharing passwords
+- **Check the console** for errors — most problems show up there
 
-<br />
+---
 
-<Tip>
+## 🐣 Summary
 
-Mintlify supports [HTML tags in Markdown](https://www.markdownguide.org/basic-syntax/#html). This is helpful if you prefer HTML tags to Markdown syntax, and lets you create documentation with infinite flexibility.
-
-</Tip>
-
-### iFrames
-
-Loads another HTML page within the document. Most commonly used for embedding videos.
-
-```html
-<iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>
-```
+The HighTPS Panel gives you clean, powerful control of your servers. Whether you’re hosting for friends or running a full hosting service, you’ll find it easy to use and incredibly flexible. Keep exploring — and don’t be afraid to break things. That’s the best way to learn.
